@@ -3,10 +3,12 @@ import java.util.Objects;
 public class Game {
     private String name;
     private double rating;
-    private int price;
+    private double price;
 
-    public Game(String name, double rating, int price) {
-        //TODO
+    public Game(String name, double rating, double price) {
+        this.rating = rating;
+        this.name = name;
+        this.price = price;
 
     }
 
@@ -14,19 +16,21 @@ public class Game {
         return name;
     }
 
-
     public double getRating() {
         return rating;
     }
 
-    public int getPrice() {
-        return price;
-    }
+    public double getPrice() { return price;}
+
+    public void setName(String name) { this.name = name;}
+
+    public void setRating(double rating) { this.rating = rating;}
+
+    public void setPrice(int price) { this.price = price;}
 
     @Override
     public String toString() {
-        //TODO
-        return "";
+        return  "Game [name=" + name + ", rating=" + rating + ", price=" + price + "]";
     }
 
     @Override
